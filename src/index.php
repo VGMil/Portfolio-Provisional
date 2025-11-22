@@ -11,8 +11,8 @@
 <nav class="nav-console">
     <div class="nav-brand">VGMIL</div>
     <ul class="nav-menu">
-        <li><a href="index.php" class="<?php echo ($pagina_actual == 'index.php') ? 'active' : ''; ?>">Inicio</a></li>
-        <li><a href="contacto.php" class="<?php echo ($pagina_actual == 'contacto.php') ? 'active' : ''; ?>">Contacto</a></li>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="contacto.php">Contacto</a></li>
     </ul>
 </nav>
 
@@ -31,9 +31,9 @@
                 <p>Integro soluciones <strong>IoT</strong> y <strong>AI</strong> para resolver problemas reales.</p>
                 <p>Busco desafíos en entornos donde pueda aplicar <strong>metodologías Ágiles</strong>, principios <strong>SOLID</strong> y crear tecnología que <strong>marquen la diferencia</strong>.</p>
             </div>
-            <button class='button-card'>
+            <a class='button-card' href="contacto.php">
                 ¡Contáctame!
-            </button>
+            </a>
         </div>
     </section>
 </main>
