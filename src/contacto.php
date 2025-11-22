@@ -31,7 +31,7 @@
             <p>Completa tu ficha.</p>
         </div>
 
-        <form action="guardar.php" method="POST" class="technical-form">
+        <form action="/lib/guardar.php" method="POST" class="technical-form">
             <div class="form-group">
                 <label for="nombre">NOMBRE</label>
                 <input type="text" id="nombre" name="nombre" required placeholder="Ej: Dev Anónimo" autocomplete="off">
