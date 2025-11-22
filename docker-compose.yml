@@ -15,12 +15,7 @@ services:
       - "DB_PASSWORD=password"
       - "DB_NAME=miblog"
     # Instalación de dependencias al iniciar
-    command: >
-      bash -c "apt-get update && apt-get install -y zip unzip && 
-      docker-php-ext-install mysqli && 
-      curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && 
-      apache2-foreground"
-
+    command: bash -c "docker-php-ext-install mysqli && apache2-foreground"
   db:
     image: mysql:5.7
     environment:
@@ -30,6 +25,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - db_data:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   # --- NUEVO SERVICIO: PHPMYADMIN ---
   phpmyadmin:
