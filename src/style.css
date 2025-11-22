@@ -299,3 +299,46 @@ main {
     box-shadow: 0 0 0 #403B33; 
     background-color: #fff;
 }
+
+
+/* --- Confirmacion y Errores ---- */
+
+.mode-success {
+    border: 2px solid #49BF63; /* Borde verde */
+    box-shadow: 
+        -1px 1px 0 #3da052,
+        -2px 2px 0 #3da052, 
+        -15px 20px 30px rgba(0,0,0,0.2);
+}
+
+.mode-success h2 {
+    color: #2e7d32;
+    border-bottom-color: #2e7d32;
+}
+
+/* MODO ERROR (Rojo Alerta) */
+.mode-error {
+    border: 2px solid #d32f2f; /* Borde rojo */
+    background-color: #f8d7da; /* Papel ligeramente rojizo */
+    color: #721c24;
+    
+    box-shadow: 
+        -1px 1px 0 #b71c1c,
+        -2px 2px 0 #b71c1c, 
+        -15px 20px 30px rgba(0,0,0,0.2);
+}
+
+.mode-error h2 {
+    color: #c62828;
+    border-bottom-color: #c62828;
+}
+
+.mode-error .submit-btn {
+    background-color: #c62828;
+    color: white;
+    border-color: #8e0000;
+}
+
+.mode-error .submit-btn:hover {
+    background-color: #8e0000;
+}

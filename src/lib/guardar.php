@@ -28,7 +28,8 @@ if (empty($mensaje_limpio)) {
 
 if (!empty($errores)) {
     $mensajeError = urlencode(implode(" - ", $errores));
-    echo $mensajeError;
+    header('Location: ../confirmar.php?error='. $mensajeError);
+    exit;
 } else {
 
 
@@ -40,11 +41,15 @@ if (!empty($errores)) {
     $query->bind_param("sss", $nombre, $email, $mensaje_limpio);
 
     if ($query->execute()) {
-        header('Location: ../index.php');
+        header('Location: ../confirmar.php');
+        $mysqli->close();
+        $query->close();
+        exit;
     } else {
-        echo "Error al ejecutar: " . $query->error;
+        header('Location: ../confirmar.php?error='.$query->error);
+        $mysqli->close();
+        $query->close();
+        exit;
     }
 
-    $mysqli->close();
-    $query->close();
 }
